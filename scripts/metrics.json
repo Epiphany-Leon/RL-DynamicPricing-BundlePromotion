@@ -1,0 +1,657 @@
+{
+  "training": {
+    "episodes": 1500,
+    "final_eps": 0.05,
+    "states_seen": 37,
+    "states_total": 72,
+    "reference_profit": 900.0
+  },
+  "main_eval": {
+    "fixed": {
+      "avg": {
+        "reward": 115.24916000000002,
+        "raw_profit": 99603.99899999998,
+        "avg_daily_profit": 830.033325,
+        "stockout_total": 0.0,
+        "avg_inventory": 91.844625,
+        "bundle_ratio": 0.0,
+        "discount_ratio": 0.0,
+        "price_change_ratio": 0.0,
+        "lock_choice_ratio": 0.0,
+        "locked_state_ratio": 0.0
+      },
+      "std": {
+        "reward": 1.5733480511176012,
+        "raw_profit": 1232.5558094459661,
+        "avg_daily_profit": 10.271298412049717,
+        "stockout_total": 0.0,
+        "avg_inventory": 0.5069653022725842,
+        "bundle_ratio": 0.0,
+        "discount_ratio": 0.0,
+        "price_change_ratio": 0.0,
+        "lock_choice_ratio": 0.0,
+        "locked_state_ratio": 0.0
+      }
+    },
+    "rule": {
+      "avg": {
+        "reward": 121.31944666666666,
+        "raw_profit": 104427.40199999999,
+        "avg_daily_profit": 870.2283500000001,
+        "stockout_total": 0.0,
+        "avg_inventory": 90.96408333333333,
+        "bundle_ratio": 0.28316666666666657,
+        "discount_ratio": 0.00025,
+        "price_change_ratio": 0.0,
+        "lock_choice_ratio": 0.0,
+        "locked_state_ratio": 0.0
+      },
+      "std": {
+        "reward": 1.8139450682455478,
+        "raw_profit": 1455.225544029515,
+        "avg_daily_profit": 12.126879533579292,
+        "stockout_total": 0.0,
+        "avg_inventory": 0.9240803949813505,
+        "bundle_ratio": 0.0011666666666666622,
+        "discount_ratio": 0.0014215601757693315,
+        "price_change_ratio": 0.0,
+        "lock_choice_ratio": 0.0,
+        "locked_state_ratio": 0.0
+      }
+    },
+    "q_learn": {
+      "avg": {
+        "reward": 192.75933042777783,
+        "raw_profit": 161977.79738499998,
+        "avg_daily_profit": 1349.8149782083335,
+        "stockout_total": 0.0,
+        "avg_inventory": 91.81145833333332,
+        "bundle_ratio": 0.3664583333333333,
+        "discount_ratio": 0.066,
+        "price_change_ratio": 0.125,
+        "lock_choice_ratio": 0.3167916666666666,
+        "locked_state_ratio": 0.8582916666666663
+      },
+      "std": {
+        "reward": 2.283860008433403,
+        "raw_profit": 1829.5225202386418,
+        "avg_daily_profit": 15.246021001988685,
+        "stockout_total": 0.0,
+        "avg_inventory": 0.4850246539409675,
+        "bundle_ratio": 0.003858387328635863,
+        "discount_ratio": 0.002929732638541157,
+        "price_change_ratio": 0.0,
+        "lock_choice_ratio": 0.003059309562630105,
+        "locked_state_ratio": 0.0010197698542100354
+      }
+    },
+    "rl_vs_fixed_pct": 62.621781265027344,
+    "rule_vs_fixed_pct": 4.842579663894832
+  },
+  "robustness": {
+    "elasticities": [
+      0.1,
+      0.2,
+      0.35
+    ],
+    "profits_fixed": [
+      830.4217,
+      830.3800000000001,
+      830.0387
+    ],
+    "profits_rule": [
+      871.6418166666666,
+      870.0905833333334,
+      868.0846833333335
+    ],
+    "profits_rl": [
+      1308.193853597474,
+      1197.0822879695259,
+      1290.1404677186608
+    ]
+  },
+  "ablation": {
+    "with_bundle": {
+      "avg": {
+        "reward": 185.9103115828232,
+        "raw_profit": 156820.37542454086,
+        "avg_daily_profit": 1306.836461871174,
+        "stockout_total": 0.0,
+        "avg_inventory": 90.28120833333332,
+        "bundle_ratio": 0.3350416666666666,
+        "discount_ratio": 0.184375,
+        "price_change_ratio": 0.125,
+        "lock_choice_ratio": 0.29162499999999997,
+        "locked_state_ratio": 0.8578749999999996
+      },
+      "std": {
+        "reward": 4.725859354352399,
+        "raw_profit": 3835.8822386844327,
+        "avg_daily_profit": 31.96568532237027,
+        "stockout_total": 0.0,
+        "avg_inventory": 1.6886494022796574,
+        "bundle_ratio": 0.05101264481043455,
+        "discount_ratio": 0.04322050616059208,
+        "price_change_ratio": 0.0,
+        "lock_choice_ratio": 0.014731332349036787,
+        "locked_state_ratio": 0.0026611270586392936
+      }
+    },
+    "without_bundle": {
+      "avg": {
+        "reward": 186.96471466666665,
+        "raw_profit": 157457.26320000002,
+        "avg_daily_profit": 1312.14386,
+        "stockout_total": 0.0,
+        "avg_inventory": 91.92408333333333,
+        "bundle_ratio": 0.0,
+        "discount_ratio": 0.035916666666666666,
+        "price_change_ratio": 0.125,
+        "lock_choice_ratio": 0.37462500000000004,
+        "locked_state_ratio": 0.8747499999999999
+      },
+      "std": {
+        "reward": 2.6028905062939613,
+        "raw_profit": 2058.2483791208924,
+        "avg_daily_profit": 17.152069826007423,
+        "stockout_total": 0.0,
+        "avg_inventory": 0.49041492494734595,
+        "bundle_ratio": 0.0,
+        "discount_ratio": 0.005027010377285225,
+        "price_change_ratio": 0.0,
+        "lock_choice_ratio": 0.004353917456983112,
+        "locked_state_ratio": 0.001647809994440432
+      }
+    }
+  },
+  "trajectory_summary": {
+    "total_raw_profit": 157481.48823749996,
+    "price_change_days": 15,
+    "bundle_days": 40,
+    "discount_days": 22,
+    "horizon": 120
+  },
+  "greedy_policy_sample": [
+    {
+      "state": [
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "price_adj": 0.1,
+      "bundle": 0,
+      "discount": 0.0,
+      "discipline": "lock(7)"
+    },
+    {
+      "state": [
+        1,
+        1,
+        0,
+        0,
+        1
+      ],
+      "price_adj": -0.1,
+      "bundle": 0,
+      "discount": 0.0,
+      "discipline": "lock(7)"
+    },
+    {
+      "state": [
+        1,
+        1,
+        0,
+        1,
+        0
+      ],
+      "price_adj": 0.05,
+      "bundle": 0,
+      "discount": 0.0,
+      "discipline": "lock(7)"
+    },
+    {
+      "state": [
+        1,
+        1,
+        0,
+        1,
+        1
+      ],
+      "price_adj": 0.05,
+      "bundle": 0,
+      "discount": 0.0,
+      "discipline": "hysteresis(3)"
+    },
+    {
+      "state": [
+        1,
+        1,
+        1,
+        0,
+        0
+      ],
+      "price_adj": -0.1,
+      "bundle": 1,
+      "discount": 0.0,
+      "discipline": "lock(7)"
+    },
+    {
+      "state": [
+        1,
+        1,
+        1,
+        0,
+        1
+      ],
+      "price_adj": -0.1,
+      "bundle": 1,
+      "discount": 0.0,
+      "discipline": "lock(7)"
+    },
+    {
+      "state": [
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      "price_adj": 0.1,
+      "bundle": 1,
+      "discount": 0.1,
+      "discipline": "lock(7)"
+    },
+    {
+      "state": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "price_adj": -0.1,
+      "bundle": 1,
+      "discount": 0.0,
+      "discipline": "lock(7)"
+    },
+    {
+      "state": [
+        1,
+        2,
+        0,
+        0,
+        0
+      ],
+      "price_adj": -0.05,
+      "bundle": 0,
+      "discount": 0.0,
+      "discipline": "hysteresis(3)"
+    },
+    {
+      "state": [
+        1,
+        2,
+        0,
+        0,
+        1
+      ],
+      "price_adj": -0.1,
+      "bundle": 0,
+      "discount": 0.1,
+      "discipline": "hysteresis(3)"
+    },
+    {
+      "state": [
+        1,
+        2,
+        0,
+        1,
+        0
+      ],
+      "price_adj": 0.0,
+      "bundle": 0,
+      "discount": 0.1,
+      "discipline": "hysteresis(3)"
+    },
+    {
+      "state": [
+        1,
+        2,
+        0,
+        1,
+        1
+      ],
+      "price_adj": 0.05,
+      "bundle": 0,
+      "discount": 0.0,
+      "discipline": "lock(7)"
+    },
+    {
+      "state": [
+        1,
+        2,
+        1,
+        0,
+        0
+      ],
+      "price_adj": 0.05,
+      "bundle": 1,
+      "discount": 0.0,
+      "discipline": "lock(7)"
+    },
+    {
+      "state": [
+        1,
+        2,
+        1,
+        0,
+        1
+      ],
+      "price_adj": -0.05,
+      "bundle": 0,
+      "discount": 0.0,
+      "discipline": "hysteresis(3)"
+    },
+    {
+      "state": [
+        1,
+        2,
+        1,
+        1,
+        0
+      ],
+      "price_adj": 0.0,
+      "bundle": 1,
+      "discount": 0.0,
+      "discipline": "lock(7)"
+    },
+    {
+      "state": [
+        1,
+        2,
+        1,
+        1,
+        1
+      ],
+      "price_adj": 0.05,
+      "bundle": 0,
+      "discount": 0.0,
+      "discipline": "lock(7)"
+    },
+    {
+      "state": [
+        2,
+        0,
+        0,
+        0,
+        0
+      ],
+      "price_adj": 0.1,
+      "bundle": 0,
+      "discount": 0.0,
+      "discipline": "lock(7)"
+    },
+    {
+      "state": [
+        2,
+        0,
+        0,
+        0,
+        1
+      ],
+      "price_adj": -0.1,
+      "bundle": 0,
+      "discount": 0.0,
+      "discipline": "hysteresis(3)"
+    },
+    {
+      "state": [
+        2,
+        0,
+        0,
+        1,
+        1
+      ],
+      "price_adj": -0.1,
+      "bundle": 0,
+      "discount": 0.0,
+      "discipline": "hysteresis(3)"
+    },
+    {
+      "state": [
+        2,
+        0,
+        1,
+        0,
+        1
+      ],
+      "price_adj": -0.1,
+      "bundle": 0,
+      "discount": 0.1,
+      "discipline": "lock(7)"
+    },
+    {
+      "state": [
+        2,
+        0,
+        1,
+        1,
+        1
+      ],
+      "price_adj": -0.1,
+      "bundle": 0,
+      "discount": 0.0,
+      "discipline": "hysteresis(3)"
+    },
+    {
+      "state": [
+        2,
+        1,
+        0,
+        0,
+        0
+      ],
+      "price_adj": 0.1,
+      "bundle": 0,
+      "discount": 0.1,
+      "discipline": "lock(7)"
+    },
+    {
+      "state": [
+        2,
+        1,
+        0,
+        0,
+        1
+      ],
+      "price_adj": -0.1,
+      "bundle": 1,
+      "discount": 0.0,
+      "discipline": "hysteresis(3)"
+    },
+    {
+      "state": [
+        2,
+        1,
+        0,
+        1,
+        0
+      ],
+      "price_adj": 0.1,
+      "bundle": 0,
+      "discount": 0.0,
+      "discipline": "lock(7)"
+    },
+    {
+      "state": [
+        2,
+        1,
+        0,
+        1,
+        1
+      ],
+      "price_adj": -0.1,
+      "bundle": 0,
+      "discount": 0.0,
+      "discipline": "hysteresis(3)"
+    },
+    {
+      "state": [
+        2,
+        1,
+        1,
+        0,
+        0
+      ],
+      "price_adj": 0.0,
+      "bundle": 0,
+      "discount": 0.0,
+      "discipline": "hysteresis(3)"
+    },
+    {
+      "state": [
+        2,
+        1,
+        1,
+        0,
+        1
+      ],
+      "price_adj": -0.1,
+      "bundle": 0,
+      "discount": 0.0,
+      "discipline": "lock(7)"
+    },
+    {
+      "state": [
+        2,
+        1,
+        1,
+        1,
+        0
+      ],
+      "price_adj": -0.1,
+      "bundle": 0,
+      "discount": 0.0,
+      "discipline": "lock(7)"
+    },
+    {
+      "state": [
+        2,
+        1,
+        1,
+        1,
+        1
+      ],
+      "price_adj": 0.05,
+      "bundle": 0,
+      "discount": 0.0,
+      "discipline": "hysteresis(3)"
+    },
+    {
+      "state": [
+        2,
+        2,
+        0,
+        0,
+        0
+      ],
+      "price_adj": 0.1,
+      "bundle": 0,
+      "discount": 0.0,
+      "discipline": "lock(7)"
+    },
+    {
+      "state": [
+        2,
+        2,
+        0,
+        0,
+        1
+      ],
+      "price_adj": -0.1,
+      "bundle": 0,
+      "discount": 0.0,
+      "discipline": "hysteresis(3)"
+    },
+    {
+      "state": [
+        2,
+        2,
+        0,
+        1,
+        0
+      ],
+      "price_adj": 0.05,
+      "bundle": 0,
+      "discount": 0.0,
+      "discipline": "lock(7)"
+    },
+    {
+      "state": [
+        2,
+        2,
+        0,
+        1,
+        1
+      ],
+      "price_adj": 0.1,
+      "bundle": 0,
+      "discount": 0.0,
+      "discipline": "hysteresis(3)"
+    },
+    {
+      "state": [
+        2,
+        2,
+        1,
+        0,
+        0
+      ],
+      "price_adj": -0.05,
+      "bundle": 0,
+      "discount": 0.1,
+      "discipline": "hysteresis(3)"
+    },
+    {
+      "state": [
+        2,
+        2,
+        1,
+        0,
+        1
+      ],
+      "price_adj": 0.1,
+      "bundle": 1,
+      "discount": 0.0,
+      "discipline": "lock(7)"
+    },
+    {
+      "state": [
+        2,
+        2,
+        1,
+        1,
+        0
+      ],
+      "price_adj": -0.1,
+      "bundle": 0,
+      "discount": 0.0,
+      "discipline": "lock(7)"
+    },
+    {
+      "state": [
+        2,
+        2,
+        1,
+        1,
+        1
+      ],
+      "price_adj": 0.0,
+      "bundle": 1,
+      "discount": 0.0,
+      "discipline": "hysteresis(3)"
+    }
+  ]
+}
